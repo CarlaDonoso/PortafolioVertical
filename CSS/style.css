@@ -6,7 +6,7 @@
 body {
   background-image:url(https://www.wallpapertip.com/wmimgs/83-838410_php-html-code-php-lenguaje-de-programacion.jpg);
   font-family: verdana;
-  color: ghostwhite ;
+  color: aliceblue ;
   backdrop-filter: blur(5px);
   background-repeat: no-repeat;
   background-size:cover;
@@ -30,6 +30,24 @@ nav ul li a {
   color: ghostwhite ;
 }
 
+#menu_burger{
+  display: none ;
+}
+
+header label{
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding:1px 1px;
+  padding-left: 6px;
+  text-align:start;
+}
+
+header label:hover{
+  cursor: pointer;
+}
+
+
 p {
   text-align: center;
   margin-top: 20px;
@@ -42,7 +60,8 @@ p {
 
 h3 {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .section_home {
@@ -62,11 +81,6 @@ h3 {
 .section_proyectos h3 {
   margin-bottom: 40px;
 }*/
-
-h3{
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
 
 .section_proyectos--grid {
   display: grid;
@@ -176,7 +190,29 @@ transition: 1s;
     grid-template-rows: auto;
     gap: 20px;
     justify-items: center;
-  }
+}
+
+.desplegable{
+  position: absolute;
+  background: black;
+  width: 70%;
+  margin-left: -70%;
+}
+
+#menu_burger:checked ~ .desplegable{
+  margin: 0;
+}
+
+header label{
+  display: block;
+}
+
+.article_skills {
+  animation-name: pulso;
+  animation-duration: 5s;
+  animation-delay: 3s;
+}
+
 }
 
 @media (max-width: 690px) {
